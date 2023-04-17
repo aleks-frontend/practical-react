@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import styled from "styled-components";
+import { IconContext } from 'react-icons'
+import { FaApple } from "react-icons/fa";
+import { MdAssuredWorkload } from "react-icons/md";
+import Counter from "./components/Counter";
+
+const IconWrapper = styled.div`
+  margin: 20px;
+`;
 
 function App() {
   return (
+    <IconContext.Provider value={{
+      color: '#bada55',
+      size: '5rem'
+    }}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <IconWrapper>
+        <FaApple />
+        <MdAssuredWorkload />
+      </IconWrapper>
+      <Counter />
     </div>
+    </IconContext.Provider>
   );
 }
 
