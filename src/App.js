@@ -1,27 +1,24 @@
 import "./App.css";
-import styled from "styled-components";
-import { IconContext } from 'react-icons'
-import { FaApple } from "react-icons/fa";
-import { MdAssuredWorkload } from "react-icons/md";
-import Counter from "./components/Counter";
 
-const IconWrapper = styled.div`
-  margin: 20px;
-`;
+import { IconContext } from "react-icons";
+import Counter from "./components/Counter";
+import Toaster from "./components/Toaster/index";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-    <IconContext.Provider value={{
-      color: '#bada55',
-      size: '5rem'
-    }}>
-    <div className="App">
-      <IconWrapper>
-        <FaApple />
-        <MdAssuredWorkload />
-      </IconWrapper>
-      <Counter />
-    </div>
+    <IconContext.Provider
+      value={{
+        color: "#bada55",
+        size: "5rem",
+      }}
+    >
+      <div className="App">
+        <Counter />
+        <Toaster />
+        <ToastContainer />
+      </div>
     </IconContext.Provider>
   );
 }
