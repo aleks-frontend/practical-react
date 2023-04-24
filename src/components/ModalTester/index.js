@@ -17,8 +17,15 @@ const ModalTester = () => {
         isOpen={showModal}
         onRequestClose={() => setShowModal(false)}
         style={{
+          overlay: {
+            backgroundColor: "rgba(0˝, 0, 0, 0.75)",
+          },
           content: {
             borderRadius: "20px",
+            top: "20%",
+            bottom: "20%",
+            left: "20%",
+            right: "20%",
           },
         }}
       >
