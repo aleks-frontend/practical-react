@@ -7,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import ModalTester from './components/ModalTester/index';
 import ReactModal from 'react-modal';
+import Tooltip from "./components/Tooltip";
+import Countup from "./components/Countup";
 
 ReactModal.setAppElement("#root")
 function App() {
@@ -22,6 +24,8 @@ function App() {
         <Toaster />
         <ToastContainer />
         <ModalTester />
+        <Tooltip />
+        <Countup />
       </div>
     </IconContext.Provider>
   );
